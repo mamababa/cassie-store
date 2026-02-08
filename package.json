@@ -1,0 +1,122 @@
+{
+  "name": "@mamababa/cassie-store",
+  "version": "0.0.1",
+  "description": "A simple and easy-to-use react state management library",
+  "keywords": [
+    "react",
+    "state management",
+    "store",
+    "react store",
+    "react state management",
+    "react state",
+    "react state store",
+    "react model",
+    "react-model-store"
+  ],
+  "homepage": "https://mamababa.github.io/cassie-store",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mamababa/cassie-store.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mamababa/cassie-store/issues"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/lib/index.js",
+      "types": "./dist/esm/index.d.ts"
+    }
+  },
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "dumi dev",
+    "build": "father build",
+    "build:watch": "father dev",
+    "docs:build": "dumi build",
+    "docs:preview": "dumi preview",
+    "prepare": "husky install && dumi setup",
+    "doctor": "father doctor",
+    "lint": "eslint src --ext .ts,.tsx",
+    "lint:css": "stylelint \"{src,test}/**/*.{css,less}\"",
+    "lint:fix": "eslint --fix src --ext .ts,.tsx",
+    "type-check": "tsc --noEmit",
+    "lint:es": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
+    "prepublishOnly": "npm run build",
+    "prepack": "npm run build",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "login:repository": "sh scripts/pnpm-login.sh",
+    "change:version": "pnpm changeset && changeset version && pnpm build && pnpm lint",
+    "release": "pnpm login:repository && changeset publish && git push origin -- tags",
+    "test": "jest",
+    "test:coverage": "jest --coverage"
+  },
+  "authors": {
+    "name": "CassieWang",
+    "email": "cassie.6.wang@gmail.com",
+    "url": "https://github.com/mamababa"
+  },
+  "license": "MIT",
+  "files": [
+    "dist"
+   
+  ],
+  "sideEffects": false,
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "*.{md,json}": [
+      "prettier --write --no-error-on-unmatched-pattern"
+    ],
+    "*.{css,less}": [
+      "stylelint --fix",
+      "prettier --write"
+    ],
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "peerDependencies": {
+    "react": ">=16.9.0",
+    "react-dom": ">=16.9.0"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.29.8",
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@types/use-sync-external-store": "^1.5.0",
+    "@umijs/lint": "^4.0.0",
+    "dumi": "^2.4.13",
+    "eslint": "^8.23.0",
+    "father": "^4.1.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "prettier-plugin-organize-imports": "^3.0.0",
+    "prettier-plugin-packagejson": "^2.2.18",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "stylelint": "^14.9.1"
+  },
+  "dependencies": {
+    "use-sync-external-store": "^1.5.0"
+  }
+}
