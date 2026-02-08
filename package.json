@@ -1,6 +1,6 @@
 {
-  "name": "@mamababa/cassie-store",
-  "version": "1.0.0",
+  "name": "@cassiewang/cassie-store",
+  "version": "1.0.1",
   "description": "A simple and easy-to-use react state management library",
   "keywords": [
     "react",
@@ -14,57 +14,52 @@
     "react-model-store"
   ],
   "homepage": "https://mamababa.github.io/cassie-store",
+  "bugs": {
+    "url": "https://github.com/mamababa/cassie-store/issues"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/mamababa/cassie-store.git"
   },
-  "bugs": {
-    "url": "https://github.com/mamababa/cassie-store/issues"
+  "license": "MIT",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/esm/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/lib/index.js"
+    }
   },
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/esm/index.js",
-      "require": "./dist/lib/index.js",
-      "types": "./dist/esm/index.d.ts"
-    }
-  },
-  "scripts": {
-    "start": "npm run dev",
-    "dev": "dumi dev",
-    "build": "father build",
-    "build:watch": "father dev",
-    "docs:build": "dumi build",
-    "docs:preview": "dumi preview",
-    "prepare": "husky install && dumi setup",
-    "doctor": "father doctor",
-    "lint": "eslint src --ext .ts,.tsx",
-    "lint:css": "stylelint \"{src,test}/**/*.{css,less}\"",
-    "lint:fix": "eslint --fix src --ext .ts,.tsx",
-    "type-check": "tsc --noEmit",
-    "lint:es": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
-    "prepublishOnly": "npm run build",
-    "prepack": "npm run build",
-    "changeset": "changeset",
-    "version-packages": "changeset version",
-    "login:repository": "sh scripts/pnpm-login.sh",
-    "change:version": "pnpm changeset && changeset version && pnpm build && pnpm lint",
-    "release": "pnpm login:repository && changeset publish && git push origin -- tags",
-    "test": "jest",
-    "test:coverage": "jest --coverage"
-  },
-  "authors": {
-    "name": "CassieWang",
-    "email": "cassie.6.wang@gmail.com",
-    "url": "https://github.com/mamababa"
-  },
-  "license": "MIT",
   "files": [
     "dist"
   ],
-  "sideEffects": false,
+  "scripts": {
+    "build": "father build",
+    "build:watch": "father dev",
+    "change:version": "pnpm changeset && changeset version && pnpm build && pnpm lint",
+    "changeset": "changeset",
+    "dev": "dumi dev",
+    "docs:build": "dumi build",
+    "docs:preview": "dumi preview",
+    "doctor": "father doctor",
+    "lint": "eslint src --ext .ts,.tsx",
+    "lint:css": "stylelint \"{src,test}/**/*.{css,less}\"",
+    "lint:es": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
+    "lint:fix": "eslint --fix src --ext .ts,.tsx",
+    "login:repository": "sh scripts/pnpm-login.sh",
+    "prepack": "npm run build",
+    "prepare": "husky install && dumi setup",
+    "prepublishOnly": "npm run build",
+    "release": "pnpm login:repository && changeset publish && git push origin -- tags",
+    "start": "npm run dev",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "type-check": "tsc --noEmit",
+    "version-packages": "changeset version"
+  },
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
@@ -87,13 +82,8 @@
       "prettier --parser=typescript --write"
     ]
   },
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org"
-  },
-  "peerDependencies": {
-    "react": ">=16.9.0",
-    "react-dom": ">=16.9.0"
+  "dependencies": {
+    "use-sync-external-store": "^1.5.0"
   },
   "devDependencies": {
     "@changesets/cli": "^2.29.8",
@@ -115,7 +105,17 @@
     "react-dom": "^18.0.0",
     "stylelint": "^14.9.1"
   },
-  "dependencies": {
-    "use-sync-external-store": "^1.5.0"
+  "peerDependencies": {
+    "react": ">=16.9.0",
+    "react-dom": ">=16.9.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "authors": {
+    "name": "CassieWang",
+    "email": "cassie.6.wang@gmail.com",
+    "url": "https://github.com/mamababa"
   }
 }
