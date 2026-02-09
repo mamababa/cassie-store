@@ -1,6 +1,6 @@
 {
   "name": "@cassiewang/cassie-store",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A simple and easy-to-use react state management library",
   "keywords": [
     "react",
@@ -23,16 +23,6 @@
   },
   "license": "MIT",
   "sideEffects": false,
-  "exports": {
-    ".": {
-      "types": "./dist/esm/index.d.ts",
-      "import": "./dist/esm/index.js",
-      "require": "./dist/lib/index.js"
-    }
-  },
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],

@@ -1,5 +1,11 @@
 # @mamababa/cassie-store
 
+## 1.0.3
+
+### Patch Changes
+
+- ca94ae9: fix the export way
+
 ## 1.0.2
 
 ### Patch Changes
