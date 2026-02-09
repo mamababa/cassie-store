@@ -1,5 +1,11 @@
 # @mamababa/cassie-store
 
+## 1.0.5
+
+### Patch Changes
+
+- 92d8767: fix the import
+
 ## 1.0.3
 
 ### Patch Changes
