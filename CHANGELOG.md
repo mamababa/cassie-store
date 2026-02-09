@@ -1,5 +1,11 @@
 # @mamababa/cassie-store
 
+## 1.0.2
+
+### Patch Changes
+
+- bd641fb: test
+
 ## 1.0.1
 
 ### Patch Changes
