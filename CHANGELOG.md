@@ -4,6 +4,12 @@
 
 ### Patch Changes
 
+- 1a06f17: fix import error in the host application
+
+## 1.0.3
+
+### Patch Changes
+
 - ca94ae9: fix the export way
 
 ## 1.0.2
