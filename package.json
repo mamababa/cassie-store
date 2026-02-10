@@ -34,7 +34,9 @@
   "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "README.md",
+    "CHANGELOG.md"
   ],
   "scripts": {
     "build": "father build",
@@ -52,8 +54,9 @@
     "login:repository": "sh scripts/pnpm-login.sh",
     "prepack": "npm run build",
     "prepare": "husky install && dumi setup",
-    "prepublishOnly": "npm run build",
+    "prepublishOnly": "npm run build && npm run size-check",
     "release": "pnpm login:repository && changeset publish && git push origin -- tags",
+    "size-check": "bundlesize",
     "start": "npm run dev",
     "test": "jest",
     "test:coverage": "jest --coverage",
@@ -117,5 +120,15 @@
     "name": "CassieWang",
     "email": "cassie.6.wang@gmail.com",
     "url": "https://github.com/mamababa"
-  }
+  },
+  "bundlesize": [
+    {
+      "path": "dist/esm/index.js",
+      "maxSize": "5 KB"
+    },
+    {
+      "path": "dist/lib/index.js",
+      "maxSize": "5 KB"
+    }
+  ]
 }

@@ -1,7 +1,7 @@
-# laf-test-store
+# @cassiewang/cassie-store
 
-[![NPM version](https://img.shields.io/npm/v/laf-test-store.svg?style=flat)](https://npmjs.org/package/laf-test-store)
-[![NPM downloads](http://img.shields.io/npm/dm/laf-test-store.svg?style=flat)](https://npmjs.org/package/laf-test-store)
+[![NPM version](https://img.shields.io/npm/v/laf-test-store.svg?style=flat)](https://npmjs.org/package/@cassiewang/cassie-store)
+[![NPM downloads](https://img.shields.io/npm/dm/laf-test-store,svg?style=flat)](https://npmjs.org/package/@cassiewang/cassie-store)
 
 A react library developed with dumi
 
@@ -23,7 +23,7 @@ $ pnpm install
 $ pnpm start
 
 # build library source code
-$ pnpm run build
+$ pnpm build
 
 # build library source code in watch mode
 $ pnpm run build:watch
@@ -31,13 +31,17 @@ $ pnpm run build:watch
 # build docs
 $ pnpm run docs:build
 
-# Locally preview the production build.
+# Locally preview the production build
 $ pnpm run docs:preview
 
 # check your project for potential problems
 $ pnpm run doctor
-```
+
 
 ## LICENSE
 
 MIT
+
+
+
+```
