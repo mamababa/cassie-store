@@ -43,6 +43,7 @@
     "build:watch": "father dev",
     "change:version": "pnpm changeset && changeset version && pnpm build && pnpm lint",
     "changeset": "changeset",
+    "deploy": "npm run docs:build && gh-pages -d docs-dist",
     "dev": "dumi dev",
     "docs:build": "dumi build",
     "docs:preview": "dumi preview",
