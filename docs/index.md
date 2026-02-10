@@ -1,6 +1,6 @@
 ---
 hero:
-  title: library
+  title: library-2.10/21:55
   description: A react library developed with dumi
   actions:
     - text: Hello
@@ -9,10 +9,10 @@ hero:
       link: /
 features:
   - title: Hello
-    emoji: 💎   
+    emoji: 💎
     description: Put hello description here
   - title: World
-    emoji: 🌈 
+    emoji: 🌈
     description: Put world description here
   - title: '!'
     emoji: 🚀
@@ -20,6 +20,7 @@ features:
 ---
 
 laf-test-store
+
 <!-- ## 基础Model演示
 
 <code src="../src/BasicModelDemo.tsx"></code>
