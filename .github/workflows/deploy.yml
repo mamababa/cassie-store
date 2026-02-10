@@ -38,7 +38,7 @@ jobs:
         with: 
            node-version: '18'
            cache: 'pnpm'
-           
+
       - name: 安装依赖
         run: pnpm install
 
@@ -48,5 +48,5 @@ jobs:
       - name: Deploy to Github Pages
         uses: peaceiris/actions-gh-pages@v3
         with: 
-            github_token: ${{ secrets.GITHUB_TOKEN }}
+            github_token: ${{ secrets.GH_TOKEN }}
             publish_dir: ./docs-dist
