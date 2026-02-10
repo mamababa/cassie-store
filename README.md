@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# cassie-store
-A simple and easy-to-use react state management library
-=======
 # @cassiewang/cassie-store
 
 [![NPM version](https://img.shields.io/npm/v/laf-test-store.svg?style=flat)](https://npmjs.org/package/@cassiewang/cassie-store)
@@ -49,4 +45,3 @@ MIT
 
 
 ```
->>>>>>> master
